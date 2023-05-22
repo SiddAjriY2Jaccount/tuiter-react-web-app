@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wd-header-spacing {
+    padding-left: 20px;
+}
+
+.wd-inline {
+    display: flex;
+    align-items: center;
+}
+
+.wd-card-title-spacing {
+    padding-left: 10px;
+}
+
+.wd-blue-tick {
+    color: blue;
+    padding-left: 3px;
+}
+
+.wd-grey {
+    color: rgb(90,90, 90);
+}
+
+.wd-text-spacing {
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.wd-para {
+    margin-left: 25px;
+    padding-left: 50px;
+}
+
+.wd-dp-spacing {
+    margin-left: 20px;
+}
+
+.wd-bold {
+    font-weight: bold;
+}
+
+.wd-card-image {
+    width: 500px;
+    height: 300px;
+    border-radius: 25px 25px 0 0;
+    /* margin: 0 0 0 65px; */
+}
+
+.wd-border {
+    width: 500px;
+    height: 450px;
+    border-radius: 25px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    margin: 0 0 20px 65px;
+}
+
+.wd-icons {
+    margin-left: 25px;
+    padding-left: 50px;
+    color:rgb(90,90, 90);
+}
+
+.wd-number-spacing {
+    padding-left: 10px;
+}
