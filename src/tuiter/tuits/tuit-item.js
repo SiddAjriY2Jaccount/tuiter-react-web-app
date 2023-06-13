@@ -1,7 +1,7 @@
 import React from "react";
 import TuitStats from "./tuit-stats";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../reducers/home-tuits-reducer";
+import { deleteTuitThunk } from "../services/tuits-thunks";
 
 const TuitItem = ({
   tuit = {
@@ -11,7 +11,7 @@ const TuitItem = ({
     title:
       "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
     time: "2h",
-    image: "spaceX.jpg",
+    image: "spacex.png",
     liked: true,
     replies: 123,
     retuits: 432,
@@ -22,7 +22,8 @@ const TuitItem = ({
 }) => {
   const dispatch = useDispatch();
   const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    console.log("Called");
+    dispatch(deleteTuitThunk(id));
   };
 
   return (
@@ -37,10 +38,15 @@ const TuitItem = ({
           />
         </div>
         <div className="col-11">
-          <i
-            className="bi bi-x-lg float-end"
-            onClick={() => deleteTuitHandler(tuit._id)}
-          ></i>
+          <button
+            className="float-end"
+            style={{ background: "none", border: "none" }}
+          >
+            <i
+              className="bi bi-x-lg float-end"
+              onClick={() => deleteTuitHandler(tuit._id)}
+            ></i>
+          </button>
           <div className="d-flex">
             <p className="d-inline-block fw-bold">{tuit.userName}</p>
             <div className="d-inline-block mx-2">

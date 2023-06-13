@@ -1,9 +1,9 @@
-import tuitsArray from "../tuit-summary-list/tuits.json"
-import { createSlice } from "@reduxjs/toolkit"
+import tuitsArray from "../tuit-summary-list/tuits.json";
+import { createSlice } from "@reduxjs/toolkit";
 
 const tuitsSlice = createSlice({
-    name: "tuits",
-    initialState: tuitsArray
-})
+  name: "tuits",
+  initialState: tuitsArray,
+});
 
-export default tuitsSlice.reducer
+export default tuitsSlice.reducer;
