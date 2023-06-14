@@ -11,7 +11,7 @@ const RegisterScreen = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleRegistration = () => {
+  const handleRegistration = async () => {
     try {
       const data = {
         username: username,
@@ -19,7 +19,7 @@ const RegisterScreen = () => {
         firstName: firstName,
         lastName: lastName,
       };
-      dispatch(registerThunk(data));
+      await dispatch(registerThunk(data));
       navigate("/tuiter/profile");
     } catch (e) {
       alert(e);
